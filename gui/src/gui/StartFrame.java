@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package gui;
 
 import javax.swing.*;
 
-/**
- *
- * @author Arvid
- */
+
 public class StartFrame extends javax.swing.JPanel {
 
     /**
@@ -106,7 +99,7 @@ public class StartFrame extends javax.swing.JPanel {
         occupantButtonPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Boende", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 14))); // NOI18N
         occupantButtonPanel.setPreferredSize(new java.awt.Dimension(395, 127));
 
-        occupantButton.setText("Profil Hantering");
+        occupantButton.setText("Profilhantering");
 
         javax.swing.GroupLayout occupantButtonPanelLayout = new javax.swing.GroupLayout(occupantButtonPanel);
         occupantButtonPanel.setLayout(occupantButtonPanelLayout);
@@ -128,7 +121,7 @@ public class StartFrame extends javax.swing.JPanel {
         staffButtonPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personal", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 14))); // NOI18N
         staffButtonPanel1.setPreferredSize(new java.awt.Dimension(395, 127));
 
-        staffButton1.setText("Profil Hantering");
+        staffButton1.setText("Profilhantering");
         staffButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 staffButton1ActionPerformed(evt);

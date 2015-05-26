@@ -1,8 +1,5 @@
 package gui;
 
-
-
-
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.*;
@@ -107,6 +104,7 @@ public class Controller {
                 ga = new GroupActivity(act, date, time, staff, phone, location, adress, cost, spots);
                 //System.out.println(ga);
                 JOptionPane.showMessageDialog(null, "Aktivitenten har blivit sparad i systemet.", "Aktivitet sparad!", JOptionPane.INFORMATION_MESSAGE);
+                clearAllFields(0,0);
             } else if (contin && type == 1)  {
                 String act = gPanel.getChangeActivityField().getText();
                 String date = gPanel.getChangeDateField().getText();
@@ -117,6 +115,7 @@ public class Controller {
                 String phone = gPanel.getChangePhoneField().getText();
                 ga = new GroupActivity(id, act, date, time, staff, phone, location, adress, cost, spots);
                 JOptionPane.showMessageDialog(null, "Aktivitenten har blivit sparad i systemet.", "Aktivitet sparad!", JOptionPane.INFORMATION_MESSAGE);
+                clearAllFields(0,1);
                 //System.out.println(ga);
             } else {
                 //System.out.println("klara inte checkcheck"); 
@@ -154,6 +153,7 @@ public class Controller {
                 va = new VisitActivity(act, date, time, staff, phone, location, duration);
                 //System.out.println(va);
                 JOptionPane.showMessageDialog(null, "Aktivitenten har blivit sparad i systemet.", "Aktivitet sparad!", JOptionPane.INFORMATION_MESSAGE);
+                clearAllFields(1,0);
             } else if (contin && type == 1) {
                 String act = vPanel.getChangeActivityField().getText();
                 String date = vPanel.getChangeDateField().getText();
@@ -165,6 +165,7 @@ public class Controller {
                 System.out.println(String.format("%d %s %s %s %s %s %s %s",id, act, date, time, staff, phone, location, duration));
                 va = new VisitActivity(id, act, date, time, staff, phone, location, duration);
                 JOptionPane.showMessageDialog(null, "Aktivitenten har blivit sparad i systemet.", "Aktivitet sparad!", JOptionPane.INFORMATION_MESSAGE);
+                clearAllFields(1,1);
                 //System.out.println(va);
             } else {
                 //System.out.println("klara inte checkcheck");
@@ -205,6 +206,7 @@ public class Controller {
                 pa = new PrivateActivity(act, date, time, staff, phone, location, adress, name, ass);
                 //System.out.println(pa);
                 JOptionPane.showMessageDialog(null, "Aktivitenten har blivit sparad i systemet.", "Aktivitet sparad!", JOptionPane.INFORMATION_MESSAGE);
+                clearAllFields(2,0);
             } else if (contin && type == 1)  {
                 String act = pPanel.getChangeActivityField().getText();
                 String date = pPanel.getChangeDateField().getText();
@@ -218,6 +220,7 @@ public class Controller {
                 pa = new PrivateActivity(id, act, date, time, staff, phone, location, adress, name, ass);
                 //System.out.println(pa);
                 JOptionPane.showMessageDialog(null, "Aktivitenten har blivit sparad i systemet.", "Aktivitet sparad!", JOptionPane.INFORMATION_MESSAGE);
+                clearAllFields(2,1);
             } else {
                 //System.out.println("klara inte checkcheck"); 
                 JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifylla rätt", "Formulär fel", JOptionPane.ERROR_MESSAGE);
@@ -430,6 +433,81 @@ public class Controller {
         return true;
         }
         
+        private void clearAllFields(int frame, int type) {
+            if (frame == 0) {// GRP PANEL
+                if (type == 0) { // SAVE
+                    gPanel.getCreateActivityField().setText("");
+                    gPanel.getCreateDateField().setText("");
+                    gPanel.getCreateTimeField().setText("");
+                    gPanel.getCreateLocationField().setText("");
+                    gPanel.getCreateAdressField().setText("");
+                    gPanel.getCreateStaffField().setText("");
+                    gPanel.getCreatePhoneField().setText("");
+                    gPanel.getCreateCostField().setText("");
+                    gPanel.getCreateSpotsField().setText("");
+
+                } else if (type == 1) { // UPDATE
+                    gPanel.getChangeIdField().setText("");
+                    gPanel.getChangeActivityField().setText("");
+                    gPanel.getChangeDateField().setText("");
+                    gPanel.getChangeTimeField().setText("");
+                    gPanel.getChangeLocationField().setText("");
+                    gPanel.getChangeAdressField().setText("");
+                    gPanel.getChangeStaffField().setText("");
+                    gPanel.getChangePhoneField().setText("");
+                    gPanel.getChangeCostField().setText("");
+                    gPanel.getChangeSpotsField().setText("");
+
+                }
+            } else if (frame == 1) { // VIS PANEL
+                if (type == 0) { //CrEATE
+                    vPanel.getCreateActivityField().setText("");
+                    vPanel.getCreateDateField().setText("");
+                    vPanel.getCreateTimeField().setText("");
+                    vPanel.getCreateLocationField().setText("");
+                    vPanel.getCreateStaffField().setText("");
+                    vPanel.getCreatePhoneField().setText("");
+                    vPanel.getCreateDurationField().setText("");
+
+                } else if (type == 1) { //UPDATE
+                    vPanel.getChangeIdField().setText("");
+                    vPanel.getChangeActivityField().setText("");
+                    vPanel.getChangeDateField().setText("");
+                    vPanel.getChangeTimeField().setText("");
+                    vPanel.getChangeLocationField().setText("");
+                    vPanel.getChangeStaffField().setText("");
+                    vPanel.getChangePhoneField().setText("");
+                    vPanel.getChangeDurationField().setText("");
+
+                }
+            } else if (frame == 2) { // priv panel
+                if (type == 0) { //CrEATE
+                    pPanel.getCreateActivityField().setText("");
+                    pPanel.getCreateDateField().setText("");
+                    pPanel.getCreateTimeField().setText("");
+                    pPanel.getCreateLocationField().setText("");
+                    pPanel.getCreateAdressField().setText("");
+                    pPanel.getCreateStaffField().setText("");
+                    pPanel.getCreatePhoneField().setText("");
+                    pPanel.getCreateNameField().setText("");
+                    pPanel.getCreateAssistanceField().setText("");
+
+                } else if (type == 1) { //UPDATE
+                    pPanel.getChangeIdField().setText("");
+                    pPanel.getChangeActivityField().setText("");
+                    pPanel.getChangeDateField().setText("");
+                    pPanel.getChangeTimeField().setText("");
+                    pPanel.getChangeLocationField().setText("");
+                    pPanel.getChangeAdressField().setText("");
+                    pPanel.getChangeStaffField().setText("");
+                    pPanel.getChangePhoneField().setText("");
+                    pPanel.getChangeNameField().setText("");
+                    pPanel.getChangeAssistanceField().setText("");
+
+            }
+        }
+        }
+        
         // frame 0 = groupframe, frame 1 = listframe
         public void populateGroupList(ArrayList<GroupActivity> arrList, int frame) {
             GroupActivity[] items = new GroupActivity[arrList.size()];
@@ -603,6 +681,8 @@ public class Controller {
                     GroupActivity sel = (GroupActivity) gPanel.getSearchResultList().getSelectedValue();
                     populateRegisterList(ActivityDB.getRegisterList(sel.getId()));
                     regWindow.getActivityIdLabel().setText(""+sel.getId());
+                    regWindow.getPersonNameField().setText("");
+                    regWindow.getAssistanceField().setText("");
                     regWindow.setLocationRelativeTo(mainF);
                     regWindow.setVisible(true);
                 }
