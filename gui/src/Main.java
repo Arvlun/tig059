@@ -1,7 +1,7 @@
 
 import gui.*;
-import server.model.*;
-import server.function.*;
+//import server.model.*;
+//import server.function.*;
 
 public class Main {
 

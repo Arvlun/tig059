@@ -94,7 +94,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="scheduleButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Schema Hanterare"/>
+            <Property name="text" type="java.lang.String" value="Tidsplanhanterare"/>
           </Properties>
         </Component>
       </SubComponents>

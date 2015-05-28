@@ -9,7 +9,11 @@ public class Registration {
     
     public Registration(String name, String ass) {
         this.name = name;
-        assistance = ass;
+        if (ass.equals("")) {
+           assistance="Ingen";
+        } else {
+            assistance = ass;
+        }
     }
     
     public String getName() {

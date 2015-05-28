@@ -40,7 +40,7 @@ public class StartFrame extends javax.swing.JPanel {
         scheduleButtonPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Schema", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 0, 14))); // NOI18N
         scheduleButtonPanel.setPreferredSize(new java.awt.Dimension(395, 127));
 
-        scheduleButton.setText("Schema Hanterare");
+        scheduleButton.setText("Tidsplanhanterare");
 
         javax.swing.GroupLayout scheduleButtonPanelLayout = new javax.swing.GroupLayout(scheduleButtonPanel);
         scheduleButtonPanel.setLayout(scheduleButtonPanelLayout);

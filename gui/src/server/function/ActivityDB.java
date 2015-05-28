@@ -368,12 +368,12 @@ public class ActivityDB {
     
     public static void registerResident(int id, Registration reg) {
         String sql = String.format("INSERT INTO registered VALUES (%d, '%s', '%s')", id, reg.getName(), reg.getAssistance());
-        System.out.println(sql + " " + DBUtils.executeUpdate(sql));
+        DBUtils.executeUpdate(sql);
     }
     
     public static void deregisterResident(int id, Registration reg) {
         String sql = String.format("DELETE FROM registered WHERE actid=%d AND name='%s'", id, reg.getName());
-        System.out.println(sql + " " + DBUtils.executeUpdate(sql));
+        DBUtils.executeUpdate(sql);
     }
     
 }

@@ -119,7 +119,7 @@ public class Controller {
                 //System.out.println(ga);
             } else {
                 //System.out.println("klara inte checkcheck"); 
-                JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifylla rätt", "Formulär fel", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifyllda rätt.", "Formulär fel", JOptionPane.ERROR_MESSAGE);
             }
             return ga;
         }
@@ -169,7 +169,7 @@ public class Controller {
                 //System.out.println(va);
             } else {
                 //System.out.println("klara inte checkcheck");
-                JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifylla rätt", "Formulär fel", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifyllda rätt.", "Formulär fel", JOptionPane.ERROR_MESSAGE);
             }
             return va;
         }
@@ -223,7 +223,7 @@ public class Controller {
                 clearAllFields(2,1);
             } else {
                 //System.out.println("klara inte checkcheck"); 
-                JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifylla rätt", "Formulär fel", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Se till att alla fält är ifyllda och ifyllda rätt.", "Formulär fel", JOptionPane.ERROR_MESSAGE);
             }
             return pa;
         }
